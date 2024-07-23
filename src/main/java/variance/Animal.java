@@ -1,4 +1,4 @@
 package variance;
 
-public class Animal {
+public class Animal implements Living {
 }
