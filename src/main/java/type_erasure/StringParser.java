@@ -16,19 +16,20 @@ public class StringParser {
     }
   }
 
-//    public static <T> T read(String rawData, Class<T> type) {
-//      try {
-//        T instance = type.getDeclaredConstructor().newInstance();
-//        rawData.lines()
-//            .map(line -> line.split(",", 2))
-//            .forEach(parts -> setField(instance, parts[0], parts[1]));
+//  public static <T> T readProper(String rawData, Class<T> type) {
+//    try {
+//      T instance = type.getDeclaredConstructor()
+//          .newInstance();
+//      rawData.lines()
+//          .map(line -> line.split(",", 2))
+//          .forEach(parts -> setField(instance, parts[0], parts[1]));
 //
-//        return instance;
-//      } catch (ReflectiveOperationException e) {
-//        System.out.println(":-(");
-//        throw new RuntimeException(e);
-//      }
+//      return instance;
+//    } catch (ReflectiveOperationException e) {
+//      System.out.println(":-(");
+//      throw new RuntimeException(e);
 //    }
+//  }
 
   private static <T> void setField(T instance, String field, String value) {
     var setter = "set" + field.substring(0, 1)
@@ -46,6 +47,7 @@ public class StringParser {
     var rawData = "name,John Doe\ncountry,USA";
 
     var person = StringParser.read(rawData);
+//    var actualPerson = StringParser.readProper(rawData, Person.class);
 
     System.out.println(person);
   }

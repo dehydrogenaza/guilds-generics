@@ -55,9 +55,9 @@ public class Wildcards {
 //    List<? super Animal> superAnimals5 = randomObjects; //4 List<Object>
 
     List<? super Animal> superAnimals = pets;
-//    Animal someAnimal = superAnimals.getFirst(); //1
-//    Living someLivingThing = superAnimals.getFirst(); //2
-//    Object someObject = superAnimals.getFirst(); //3
+//    Animal anAnimal = superAnimals.getFirst(); //1
+//    Living aLivingThing = superAnimals.getFirst(); //2
+//    Object anObject = superAnimals.getFirst(); //3
 //    superAnimals.add(new Animal()); //4
 //    superAnimals.add(new Object()); //5
 //    superAnimals.add(new Dog()); //6
